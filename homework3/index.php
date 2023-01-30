@@ -34,17 +34,17 @@ class Color
             ->setBlue($blue);
     }
 
-    private function getRed():int
+    public function getRed():int
     {
         return $this->red;
     }
 
-    private function getGreen():int
+    public function getGreen():int
     {
         return $this->green;
     }
 
-    private function getBlue():int
+    public function getBlue():int
     {
         return $this->blue;
     }
@@ -62,5 +62,6 @@ $color1 = new Color(10, 20, 30);
 $color2 = new Color(90, 200, 80);
 
 $mixedColor = $color2->mixColor($color1);
-print_r($mixedColor);
 ?>
+
+<body style="background-color:rgb(<?php echo $mixedColor->getRed().", ".$mixedColor->getGreen().", ".$mixedColor->getBlue(); ?>)">
